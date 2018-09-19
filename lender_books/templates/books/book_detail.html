@@ -2,10 +2,11 @@
 
 {% block content %}
 <div class="books_detail">
-    <h3>{{ book.title }} {{ book.year }}</h3>
-    <p>{{ book.author }}</p>
-    <p>{{ book.status }}</p>
-    <p>{{ book.date_added }}</p>
-    <p>{{ book.last_borrowed }}</p>
+    <h3>Book: {{ book.title }} </h3>
+    <p>Author: {{ book.author }}</p>
+    <p>Year {{ book.year }}</p>
+    <p>Status: {{ book.status }}</p>
+    <p>Date added: {{ book.date_added }}</p>
+    <p>Last borrowed: {{ book.last_borrowed }}</p>
 </div>
 {% endblock %}
