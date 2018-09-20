@@ -19,6 +19,9 @@ from .views import home_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django_registration.backends.activation.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', home_view, name='home'),
     path('books/', include('lender_books.urls'))
+
 ]
