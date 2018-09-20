@@ -1,5 +1,5 @@
 from django.db import models
-import datetime
+from django.contrib.auth.models import User
 
 
 class Book(models.Model):
@@ -11,6 +11,7 @@ class Book(models.Model):
 
     YEAR = [(str(i), str(i)) for i in range(1900, 2018)]
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='books')
     title = models.CharField(max_length=48)
     author = models.CharField(max_length=48)
     year = models.CharField(choices=YEAR, max_length=4)

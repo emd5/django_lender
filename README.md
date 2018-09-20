@@ -6,6 +6,19 @@ Using python 3.7 scripting language with Django Framework and Docker
 
 ### Changelog
 =====
+
+##### 2018-09-19
+
+- [x] update views with authentication logic
+- [x] update setup.py configurations to work with django_registration
+- [x] update model with appropriate users and books
+- [x] update testing with new test cases
+- [x] included django registration templates for account registration, login/logout features
+- [x] update base.html with new URLs
+
+
+
+
 ##### 2018-09-18
 - [x] Modify the contents of the templates/ directory to include a base.html and home.html
 - [x] Create a simple view controller for the home route, which renders the home.html document

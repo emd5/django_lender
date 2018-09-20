@@ -1,9 +1,13 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.core.exceptions import PermissionDenied
 from .models import Book
 
 
 def books_list_view(request):
-    books = Book.objects.all()
+    if not request.user.is_authenticated:
+        raise PermissionDenied
+
+    books = Book.objects.filter(user__username=request.user.username)
 
     context = {
         'books': books
@@ -13,8 +17,11 @@ def books_list_view(request):
 
 
 def books_detail_view(request, pk=None):
-    book = get_object_or_404(Book, id=pk)
-    context ={
+    if not request.user.is_authenticated:
+        return redirect(reverse('login'))
+
+    book = get_object_or_404(Book, id=pk, user__id=request.user.id)
+    context = {
         'book': book,
     }
 
