@@ -1,0 +1,12 @@
+body, form {
+    margin: 10;
+    padding: 10;
+}
+
+a {
+    color: #990b18;
+}
+
+a:hover {
+    color: #8affc5;    
+}

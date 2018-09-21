@@ -1,0 +1,35 @@
+/* layout.css */
+header, main, footer {
+    width: auto;
+    margin: auto;
+}
+
+header{
+  margin:auto;
+  height: 200px;
+  background-image: url('../assets/book.jpg');
+  background-position-y: center;
+  color: #485b4d;
+  font-size: 40px;
+  padding: 20px;
+}
+
+
+main{
+  padding: 10px;
+  height: 500px;
+  background-color: #7f998b;
+  color: #333333;
+  font-size: 20px;
+}
+
+footer{
+  padding: 10px;
+  text-align: center;
+  height: 80px;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+}
+
+
