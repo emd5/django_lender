@@ -1,0 +1,32 @@
+/*A Base rule is applied to an element using an element selector, 
+a descendent selector, or a child selector, along with any pseudo-classes. 
+It doesn’t include any class or ID selectors. It is defining the default 
+styling for how that element should look in all occurrences on the page.*/
+
+html, body, form { 
+  margin: 0; 
+  padding: 0; 
+  font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif
+}
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the nav links */
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Change color on hover */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
