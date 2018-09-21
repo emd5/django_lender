@@ -1,25 +1,15 @@
-#header, #article, #footer {
-    width: 960px;
-    margin: auto;
+/*a Module is a more discrete component of the page. It is your navigation bars and your 
+carousels and your dialogs and your widgets and so on. This is the meat 
+of the page. Modules sit inside Layout components. Modules can sometimes
+sit within other Modules, too. Each Module should be designed to exist 
+as a standalone component*/
+
+li{
+  display: inline;
 }
 
-#article {
-    border: solid #CCC;
-    border-width: 1px 0 0;
+header > p{
+  padding: 40px;
+  background-color: rgba(255,255,255,.7);
 }
 
-#article {
-    float: left;
-}
-
-#sidebar {
-    float: right;
-}
-
-.l-flipped #article {
-    float: right;
-}
-
-.l-flipped #sidebar {
-    float: left;
-}

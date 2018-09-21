@@ -6,7 +6,8 @@ register = template.Library()
 
 @register.filter
 def get_date_string(value):
-    # {{ note.date_created | get_date_string }}
+    """A custom template filter to display date changes"""
+    # {{ book.date_added | get_date_string }}
     now = timezone.now()
     delta = now - value
 
